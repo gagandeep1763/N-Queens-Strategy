@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+.btn {
+    background: #6D28D9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #4C1D95;
+}
+
+/* Toggle Switch */
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background: gray;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.toggle input:checked + .slider {
+    background: #6D28D9;
+}
+
+.toggle input:checked + .slider::before {
+    left: 20px;
+}
+
+#board {
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.white-square {
+    background-color: white;
+}
+
+.black-square {
+    background-color: #333;
+}
+
+.queen {
+    color: rgb(255, 0, 106);
+    transition: transform 0.3s ease-in-out;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queens Solver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen transition-all">
+
+    <h1 class="text-3xl font-bold mb-4">♛ N-Queens Visual Solver ♛</h1>
+
+    <div class="flex items-center gap-3 mb-4">
+        <button onclick="decreaseN()" class="btn">-</button>
+        <input type="number" id="nInput" value="4" readonly class="w-12 text-center font-bold text-lg bg-gray-800 text-white border border-gray-700 rounded">
+        <button onclick="increaseN()" class="btn">+</button>
+    </div>
+
+    <div class="flex gap-3">
+        <button onclick="solveNQueens()" class="btn">Solve</button>
+        <button onclick="nextSolution()" class="btn">Next Solution</button>
+        <button onclick="clearBoard()" class="btn">Clear</button>
+    </div>
+
+    <!-- Toggle Options -->
+    <div class="flex gap-4 mt-4">
+        <label class="toggle">
+            <input type="checkbox" id="toggleTheme" onclick="toggleTheme()">
+            <span class="slider"></span>
+            <p>Dark Mode</p>
+        </label>
+        
+        <label class="toggle">
+            <input type="checkbox" id="toggleQueens" onclick="toggleQueens()">
+            <span class="slider"></span>
+            <p>Show Queens</p>
+        </label>
+    </div>
+
+    <div id="board-container" class="mt-6">
+        <div id="board" class="grid gap-1 border border-gray-500 shadow-lg"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
